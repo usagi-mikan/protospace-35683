@@ -1,6 +1,6 @@
 class PrototypesController < ApplicationController
 
-  before_action :authenticate_user!, only: [:edit, :show]
+  before_action :authenticate_user!, only: [:edit, :new, :show]
   before_action :move_to_edit, except: [:create, :update, :destory, :new, :index, :show]
 
   def index
@@ -56,6 +56,5 @@ class PrototypesController < ApplicationController
       redirect_to action: :index
     end
   end
-
 
 end
